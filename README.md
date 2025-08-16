@@ -154,70 +154,40 @@ src/
 ```bash
 git clone https://github.com/YOUR_USERNAME/FedEx-With-NextJS.git
 cd FedEx-With-NextJS
-2. Install Dependencies
-bash
-Copy
-Edit
 npm install
-3. Setup Environment Variables
-Create a .env.local file:
 
-env
-Copy
-Edit
+
+```
+
+Create a .env.local file in the root folder and add:
+
+```
 FEDEX_API_KEY=your_sandbox_api_key
 FEDEX_API_SECRET=your_sandbox_secret
 FEDEX_ACCOUNT_NUMBER=your_account_number
 FEDEX_BASE_URL=https://apis-sandbox.fedex.com
-4. Start Development Server
-bash
-Copy
-Edit
-npm run dev
+```
+
 🧪 Testing the API (via Postman)
 Endpoint: http://localhost:3000/api/fedex-rate
 
 Method: POST
 
-Headers: Content-Type: application/json
+Headers:
 
-Body:
+Content-Type: application/json
 
-json
-Copy
-Edit
+Body (raw JSON): 
+
+```
 {
   "destinationPostalCode": "90001",
   "weight": 2
 }
-✅ You’ll receive live rate quotes using your sandbox account.
 
-🧠 FedEx API Tips
-OAuth2 is required for all requests
+```
 
-rateRequestType must be set (["LIST", "ACCOUNT"])
 
-You need a valid origin postal code and weight
-
-🛠 Built With
-Next.js 14 (App Router)
-
-FedEx Developer API
-
-Postman
-
-📄 License
-MIT © [Your Name or Org]
-
-👨‍💻 Author
-Nandan Singh
-GitHub: @Nandan222001
-
-less
-Copy
-Edit
-
-Let me know if you want:
 
 - A UI form built with `Tailwind` or `Material UI`
 - A deployed demo link
